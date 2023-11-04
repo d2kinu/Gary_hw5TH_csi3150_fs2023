@@ -1,0 +1,42 @@
+/* Set a font and some spacing for the entire body */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Center the heading */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Center the button container */
+div.button-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style each button */
+button {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Add a little more space on top of the script */
+script {
+  margin-top: 50px;
+}
