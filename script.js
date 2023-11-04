@@ -1,29 +1,27 @@
-// Demonstrating 'let'
-function showLet() {
-  let myVariable = 2; // Block-scoped variable
-  alert("Outside block scope: " + myVariable);
-  if (true) {
-    let myVariable = 3; // This 'myVariable' is different from the outside one
-    alert("Inside block scope: " + myVariable);
-  }
-  alert("After block scope: " + myVariable);
+// Array to store the list of quotes
+const quotes = [
+  "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+  "The way to get started is to quit talking and begin doing. - Walt Disney",
+  "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+  "If life were predictable it would cease to be life, and be without flavor. - Eleanor Roosevelt",
+  "If you look at what you have in life, you'll always have more. - Oprah Winfrey",
+  "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. - James Cameron",
+  "Life is what happens when you're busy making other plans. - John Lennon",
+  "Spread love everywhere you go. Let no one ever come to you without leaving happier. - Mother Teresa",
+  "When you reach the end of your rope, tie a knot in it and hang on. - Franklin D. Roosevelt",
+  "Always remember that you are absolutely unique. Just like everyone else. - Margaret Mead",
+];
+
+// Function to display a random quote
+function displayRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quoteDisplay").textContent = quotes[randomIndex];
 }
 
-// Demonstrating 'var'
-function showVar() {
-  var myVariable = 2; // Function-scoped variable
-  alert("Outside function scope: " + myVariable);
-  if (true) {
-    var myVariable = 3; // This 'myVariable' is the same as the outside one
-    alert("Inside block but function scope: " + myVariable);
-  }
-  alert("After block still in function/global scope: " + myVariable);
-}
-
-// Demonstrating 'const'
-function showConst() {
-  const myVariable = 2; // Block-scoped constant
-  alert("Constant value: " + myVariable);
-  // Uncommenting the next line will cause an error because 'const' cannot be reassigned
-  // myVariable = 3; // Error: Assignment to constant variable.
-}
+// This function would be connected to the click event of your button
+document.addEventListener("DOMContentLoaded", () => {
+  // Attach the event listener to the button with id 'quoteButton'
+  document
+    .getElementById("quoteButton")
+    .addEventListener("click", displayRandomQuote);
+});
